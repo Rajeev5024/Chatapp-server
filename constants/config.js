@@ -4,12 +4,12 @@
 // 	// 	process.env.CLIENT_URL,
 	
 // 	 ],
-const corsOptions={
-	
-		origin:"*",
-		credentials:true,
-	
-}
+const corsOptions = {
+  origin: true, // This will allow requests from any origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true, // if you need to send cookies
+};
 
 const CHATAPP_TOKEN="Chatapp-token";
 
