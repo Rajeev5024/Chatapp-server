@@ -1,11 +1,12 @@
-
+// [
+// 	// 	"http://127.0.0.1:5173",
+// 	// 	"http://localhost:4173",
+// 	// 	process.env.CLIENT_URL,
+	
+// 	 ],
 const corsOptions={
 	
-		origin:[
-			"http://127.0.0.1:5173",
-			"http://localhost:4173",
-			process.env.CLIENT_URL,
-		],
+		origin:"*",
 		credentials:true,
 	
 }
