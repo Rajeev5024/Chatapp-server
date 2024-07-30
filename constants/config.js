@@ -1,14 +1,13 @@
-// [
-// 	// 	"http://127.0.0.1:5173",
-// 	// 	"http://localhost:4173",
-// 	// 	process.env.CLIENT_URL,
-	
-// 	 ],
+// origin:[
+// 	"http://127.0.0.1:5173",
+// 	"http://localhost:4173",
+// 	process.env.CLIENT_URL,
+// ],
+
+
 const corsOptions={
-	
-		origin:"*",
+		origin : "*",
 		credentials:true,
-	
 }
 
 const CHATAPP_TOKEN="Chatapp-token";
