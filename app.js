@@ -32,7 +32,10 @@ const port=process.env.PORT||3000;
 
 const userSocketIDs=new Map();//currently active members
 const onlineUsers=new Set();
-
+const setHeaders = (req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+};
 connectDB(mongoURI);
 
 cloudinary.config({
@@ -55,6 +58,8 @@ app.use(cookieParser())
 app.use(cors(corsOptions))
 
 app.set("io",io);
+
+app.use(setHeaders);
 
 app.use("/api/v1/user",userRoute);
 
