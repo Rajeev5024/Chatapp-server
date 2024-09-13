@@ -45,17 +45,24 @@ cloudinary.config({
 })
 
 const app=express();
+app.use(cors({
+	origin : "*",
+	credentials:true,
+}))
 const server=createServer(app)
 const io= new Server(server,
 	{
-	cors:corsOptions,
+	cors:{
+		origin : "*",
+		credentials:true,
+}
 }
 )
 
 // using middleware here
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors(corsOptions))
+
 
 app.set("io",io);
 
