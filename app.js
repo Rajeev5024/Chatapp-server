@@ -46,13 +46,13 @@ cloudinary.config({
 
 const app=express();
 app.use(cors({
-	origin : "*"
+	origin : "https://chatapp-frontend-gamma.vercel.app/login"
 }))
 const server=createServer(app)
 const io= new Server(server,
 	{
 	cors:{
-		origin : "*",
+		origin : "https://chatapp-frontend-gamma.vercel.app/",
 		credentials:true,
 }
 }
