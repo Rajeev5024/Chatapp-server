@@ -46,8 +46,7 @@ cloudinary.config({
 
 const app=express();
 app.use(cors({
-	origin : "*",
-	credentials:true,
+	origin : "*"
 }))
 const server=createServer(app)
 const io= new Server(server,
